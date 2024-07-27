@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IPTV Stream</title>
+  <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet" />
+  <script src="https://vjs.zencdn.net/7.15.4/video.min.js"></script>
+  <style>
+    #videoPlayer {
+      margin: 0 auto;
+      width: 800px;
+      height: 450px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>IPTV Stream</h1>
+  <video id="videoPlayer" class="video-js vjs-default-skin" controls autoplay width="1000" height="700">
+    <source src="http://line.premiumpowers.net:80/play/movie.php?mac=00:1A:79:34:2f:00&stream=1203562.mp4&play_token=2myaVm4kj0&type=movie&sn2=" type="video/mp4">
+  </video>
+  <script>
+    const video = document.getElementById('videoPlayer');
+    video.addEventListener('loadedmetadata', function () {
+      video.play();
+    });
+  </script>
+</body>
+
+</html>
